@@ -17,7 +17,7 @@ describe("Transactions routes", () => {
     execSync("npm run knex migrate:latest");
   });
 
-  it.skip("should be able to create a new transaction", async () => {
+  it("should be able to create a new transaction", async () => {
     await request(app.server)
       .post("/transactions")
       .send({
